@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="lang">
+        <li>javascript</li>
+        <li>Python</li>
+    </ul>
+
+    <script>
+        function addlang(langname){
+            const li=document.createElement("li")
+            li.innerText=`${langname}`;
+            document.querySelector(".lang").appendChild(li);
+        }
+        addlang("java");
+        addlang("Ruby");
+
+        function optimalAddlang(lang){
+            const li=document.createElement("li");
+            li.appendChild(document.createTextNode(lang));
+            document.querySelector(".lang").append(li);
+        }
+        optimalAddlang("C");
+
+        // Edit
+        const secondlang=document.querySelector("li:nth-child(2)");
+        secondlang.innerText="Bhailang";
+
+        const third=document.querySelector("li:nth-child(4)");
+        third.innerText="Rubyonrails";
+
+        // Delete
+
+        const removec=document.querySelector("li:last-child");
+        removec.remove();
+        
+    </script>
+
+</body>
+</html>

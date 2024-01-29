@@ -1,0 +1,24 @@
+/* body{
+    background-color: black;
+    color: white;
+} */
+#gray{
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+}
+#red{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+#pink{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+}
+#gray{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
