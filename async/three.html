@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning</title>
+</head>
+<body>
+    <h1>Just Learning something and forgetting</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+    <script>
+        let intervalId;
+        const startfun=function(){
+            intervalId=setInterval(printDate,1000);
+            function printDate(){
+                console.log("Ajay",Date.now());
+            }
+        }
+        
+        document.querySelector("#start").addEventListener('click',startfun)
+    
+        document.querySelector("#stop").addEventListener('click',function(){
+            clearInterval(intervalId);
+        })
+         
+    </script>
+</body>
+</html>

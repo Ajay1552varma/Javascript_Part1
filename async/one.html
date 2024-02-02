@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Learning Async</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+
+       const h1text= document.querySelector('h1');
+        function changeText(){
+            h1text.innerHTML="After 2nd part I will learn React Js";
+        }
+        const sayname=function(){
+            console.log("Ajay Varma");
+        }
+        setTimeout(sayname,2000);
+        const change=setTimeout(changeText,2000);
+
+       const stopbtn= document.querySelector("#stop");
+       stopbtn.addEventListener('click',function(){
+          clearInterval(change);
+          console.log("Stoped the timer");
+       })
+
+    </script>
+</body>
+</html>
